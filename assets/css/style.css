@@ -127,4 +127,29 @@ main .about_us img {
   margin-bottom: 30px;
 }
 
+/* Course section */
+main .courses_section {
+  padding: 50px 0;
+}
+main .courses_section h2 {
+  color: var(--heading_color);
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+main .courses_section .card {
+  background-color: #f4f6f9;
+}
+main .courses_section .card-title {
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 0px;
+  min-height: 50px;
+  color: #828486;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+}
+
 /* Main section end */
