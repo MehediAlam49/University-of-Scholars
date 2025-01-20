@@ -9,6 +9,10 @@ body {
   font-family: "Roboto", serif;
   font-weight: 400;
 }
+:root {
+  --heading_color: #5c0931;
+}
+
 /* top header */
 header .topHeader_left_content a {
   text-decoration: none;
@@ -41,8 +45,7 @@ header .topHeader_right_content ul li .highlited_menu {
   padding: 3px 8px !important;
 }
 
-* navbar */
-header .navbar-nav .nav-item {
+* navbar */ header .navbar-nav .nav-item {
   position: relative;
   transition: all 0.3s ease;
 }
@@ -79,3 +82,49 @@ header .main_header ul li a {
   font-size: 16px;
 }
 /* header section end */
+
+/* hero section */
+main .hero_section {
+  position: relative;
+}
+main .topWave_img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0%;
+  z-index: 10;
+}
+
+/* About us section */
+main .about_us {
+  background-color: #e7e7e7;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+main .about_us h2 {
+  color: var(--heading_color);
+  font-weight: 700;
+}
+main .about_us p {
+  line-height: 25px;
+  margin-bottom: 0px;
+}
+main .about_us .default_btn {
+  background-color: #5c0931;
+  color: #fab86d;
+  font-size: 15px;
+  padding: 12px 25px;
+  border-radius: 0;
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  border: 1px solid #5c0931;
+  z-index: 1;
+}
+main .about_us img {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 49%);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Main section end */
