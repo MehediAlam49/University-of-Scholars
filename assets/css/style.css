@@ -12,8 +12,11 @@ body {
 :root {
   --heading_color: #5c0931;
 }
+/* ==========================================
+header section start
+============================================= */
 
-/* top header */
+/* top header---------------------- */
 header .topHeader_left_content a {
   text-decoration: none;
   color: #fff;
@@ -45,7 +48,8 @@ header .topHeader_right_content ul li .highlited_menu {
   padding: 3px 8px !important;
 }
 
-* navbar */ header .navbar-nav .nav-item {
+/* Main Header ------------------------------- */ 
+header .navbar-nav .nav-item {
   position: relative;
   transition: all 0.3s ease;
 }
@@ -81,9 +85,21 @@ header .dropdown-menu {
 header .main_header ul li a {
   font-size: 16px;
 }
+header .sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: 0.5s;
+}
 /* header section end */
 
-/* hero section */
+
+/* ==========================================
+Main section start
+============================================= */
+
+/* ----------------hero section----------------- */
 main .hero_section {
   position: relative;
 }
@@ -95,7 +111,7 @@ main .topWave_img {
   z-index: 10;
 }
 
-/* About us section */
+/* -----------------About us section-------------------- */
 main .about_us {
   background-color: #e7e7e7;
   padding-top: 70px;
@@ -127,7 +143,7 @@ main .about_us img {
   margin-bottom: 30px;
 }
 
-/* Course section */
+/* ----------------Course section-------------------- */
 main .courses_section {
   padding: 50px 0;
 }
