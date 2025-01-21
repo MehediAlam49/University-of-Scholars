@@ -48,7 +48,7 @@ header .topHeader_right_content ul li .highlited_menu {
   padding: 3px 8px !important;
 }
 
-/* Main Header ------------------------------- */ 
+/* Main Header ------------------------------- */
 header .navbar-nav .nav-item {
   position: relative;
   transition: all 0.3s ease;
@@ -86,14 +86,13 @@ header .main_header ul li a {
   font-size: 16px;
 }
 header .sticky {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    transition: 0.5s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: 0.5s;
 }
 /* header section end */
-
 
 /* ==========================================
 Main section start
@@ -166,6 +165,61 @@ main .courses_section .card-title {
   -moz-transition: all ease 0.5s;
   -ms-transition: all ease 0.5s;
   -o-transition: all ease 0.5s;
+}
+
+/* Message from chairman section start------------------------ */
+main .message_from_chairman {
+  padding: 100px 0;
+  background-image: url(../images/message_from_chairman_bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+}
+main .message_from_chairman::before {
+  position: absolute;
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+main .message_from_chairman .single_card {
+  text-align: center;
+  /* padding: 25px; */
+  border: 1px solid #eee;
+  margin-bottom: 30px;
+  position: relative;
+  /* background: rgba(0, 0, 0, 0.7); */
+}
+main .message_from_chairman .single_card img {
+  border-radius: 50%;
+  border: 10px solid #fab86d;
+}
+main .message_from_chairman .single_card .card {
+  background: rgba(0, 0, 0, 0.7);
+}
+main .message_from_chairman .card-title {
+  font-size: 20px;
+  color: #fff;
+}
+main .message_from_chairman .card-text {
+  font-size: 15px;
+  color: #fff;
+}
+main .message_from_chairman .btn_special{
+  display: flex;
+  justify-content: space-between;
+  color: #555555;
+}
+main .message_from_chairman .btn_special a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 10px;
 }
 
 /* Main section end */
