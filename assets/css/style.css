@@ -222,4 +222,23 @@ main .message_from_chairman .btn_special a{
   padding: 5px 10px;
 }
 
+/* News section start--------------------------- */
+main .news_section{
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+main .news_section .card-title a{
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading_color);
+}
+main .news_section .card-text{
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+}
+main .news_section .card-text a{
+  color: #555555;
+}
+
 /* Main section end */
