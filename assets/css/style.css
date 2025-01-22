@@ -5,12 +5,12 @@
 }
 body {
   color: #555;
-  font-size: 15px;
+  font-size: 18px;
   font-family: "Roboto", serif;
   font-weight: 400;
 }
 :root {
-  --heading_color: #5c0931;
+  --heading_color: #36041c;
 }
 /* ==========================================
 header section start
@@ -22,7 +22,7 @@ header .topHeader_left_content a {
   color: #fff;
 }
 header .top_header_area {
-  background-color: #5c0931;
+  background-color: #0f0130;
 }
 header .topHeader_left_content p {
   font-size: 14px;
@@ -44,8 +44,8 @@ header .topHeader_right_content ul li a i {
 }
 header .topHeader_right_content ul li .highlited_menu {
   background: #ffffff;
-  color: #5c0931 !important;
-  padding: 3px 8px !important;
+  color: #5a042d !important;
+  padding: 4px 8px !important;
 }
 
 /* Main Header ------------------------------- */
@@ -62,7 +62,6 @@ header .navbar-nav .nav-item::after {
   height: 2px;
   display: block;
   background-color: #0d6efd;
-
   transition: width 0.3s ease;
 }
 
@@ -84,6 +83,7 @@ header .dropdown-menu {
 
 header .main_header ul li a {
   font-size: 16px;
+  font-weight: 600;
 }
 header .sticky {
   position: fixed;
@@ -125,21 +125,26 @@ main .about_us p {
   margin-bottom: 0px;
 }
 main .about_us .default_btn {
-  background-color: #5c0931;
-  color: #fab86d;
+  background-color: #660433;
+  color: #f0aa5b;
   font-size: 15px;
   padding: 12px 25px;
-  border-radius: 0;
+  margin-top: 15px;
+  border-radius: 15px;
   position: relative;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   border: 1px solid #5c0931;
   z-index: 1;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 main .about_us img {
   box-shadow: 0 2px 15px rgb(0 0 0 / 49%);
   border-radius: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* ----------------Course section-------------------- */
@@ -152,11 +157,11 @@ main .courses_section h2 {
   margin-bottom: 40px;
 }
 main .courses_section .card {
-  background-color: #f4f6f9;
+  background-color: #edeef0;
 }
 main .courses_section .card-title {
-  font-size: 20px;
-  line-height: 1.3;
+  font-size: 18px;
+  line-height: 1.3rem;
   margin-bottom: 0px;
   min-height: 50px;
   color: #828486;
@@ -188,18 +193,16 @@ main .message_from_chairman::before {
 }
 main .message_from_chairman .single_card {
   text-align: center;
-  /* padding: 25px; */
   border: 1px solid #eee;
   margin-bottom: 30px;
   position: relative;
-  /* background: rgba(0, 0, 0, 0.7); */
 }
 main .message_from_chairman .single_card img {
   border-radius: 50%;
   border: 10px solid #fab86d;
 }
 main .message_from_chairman .single_card .card {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
 }
 main .message_from_chairman .card-title {
   font-size: 20px;
@@ -233,12 +236,19 @@ main .news_section .card-title a{
   color: var(--heading_color);
 }
 main .news_section .card-text{
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
-  color: #555555;
+  color: #2c2c2c;
 }
 main .news_section .card-text a{
-  color: #555555;
+  color: #2c2c2c;
 }
 
 /* Main section end */
+
+
+/* ========================Footer Section Start======================= */
+footer .top_footer{
+  background-color: #7E184E;
+  color: #fff;
+}
