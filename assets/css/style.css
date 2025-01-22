@@ -90,7 +90,11 @@ header .sticky {
   width: 100%;
   top: 0;
   z-index: 100;
-  transition: 0.5s;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 /* header section end */
 
@@ -251,4 +255,37 @@ main .news_section .card-text a{
 footer .top_footer{
   background-color: #7E184E;
   color: #fff;
+}
+footer .top_footer ul li{
+  list-style: none;
+}
+footer .top_footer ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+footer .top_footer ul li a:hover{
+  color: #f0aa5b;
+}
+
+
+footer .bottom_footer{
+  background-color: #82195E;
+  color: #fff;
+}
+footer .bottomFooter_left_content ul li a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+footer .bottomFooter_left_content ul li a i {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  margin: 0 0.2rem;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 24px;
 }
