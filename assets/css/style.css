@@ -198,8 +198,13 @@ main .message_from_chairman::before {
 main .message_from_chairman .single_card {
   text-align: center;
   border: 1px solid #eee;
+  border-radius: 8px;
   margin-bottom: 30px;
   position: relative;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 main .message_from_chairman .single_card img {
   border-radius: 50%;
