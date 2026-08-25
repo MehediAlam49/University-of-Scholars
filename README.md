@@ -13,6 +13,7 @@
 - [Sequential Setup and Tools Guide](#sequential-setup-and-tools-guide)
 - [Page-by-Page Guide](#page-by-page-guide)
 - [Animated Data Flow Diagram](#animated-data-flow-diagram)
+- [Animated Architecture Diagram](#animated-architecture-diagram)
 - [Project Structure](#project-structure)
 - [Page Inventory](#page-inventory)
 - [Planned Alternatives](#planned-alternatives)
@@ -429,6 +430,81 @@ flowchart LR
 ```
 
 The browser loads the homepage, local styles, vendor libraries, JavaScript, and media assets. `main.js` observes scrolling and toggles the `sticky` class on the main header; the browser then renders the combined result. The diagram is renderer-animated where the Markdown host supports Mermaid motion, and remains fully readable as a static flowchart elsewhere.
+
+## Animated Architecture Diagram
+
+```mermaid
+---
+title: University of Scholars front-end architecture
+config:
+  flowchart:
+	curve: basis
+---
+flowchart TD
+	Visitor([Visitor]) --> Browser[Web browser]
+
+	subgraph Presentation[Presentation layer]
+		Home[index.html<br/>Homepage]
+		Test[test.html<br/>Navbar experiment]
+		About[pages/about_us/<br/>About Us pages]
+	end
+
+	subgraph Styling[Styling layer]
+		BootstrapCSS[Bootstrap CSS]
+		SiteCSS[assets/css/style.css]
+		ResponsiveCSS[assets/css/responsive.css]
+	end
+
+	subgraph Behavior[Behavior layer]
+		BootstrapJS[Bootstrap bundle JS]
+		MainJS[assets/js/main.js]
+	end
+
+	subgraph Resources[Resource layer]
+		Images[assets/images/<br/>Images and SVGs]
+		Remix[Remix Icon fonts]
+		CDN[Google Fonts and<br/>Font Awesome CDN]
+	end
+
+	Browser --> Home
+	Browser --> Test
+	Browser --> About
+	Home --> BootstrapCSS
+	Home --> SiteCSS
+	Home --> ResponsiveCSS
+	Home --> BootstrapJS
+	Home --> MainJS
+	Home --> Images
+	Home --> Remix
+	Home --> CDN
+	Test --> BootstrapCSS
+	Test --> BootstrapJS
+	About -. uses relative paths .-> SiteCSS
+	About -. uses relative paths .-> BootstrapCSS
+	About -. uses relative paths .-> Images
+	BootstrapCSS --> Rendered[Rendered university interface]
+	SiteCSS --> Rendered
+	ResponsiveCSS --> Rendered
+	BootstrapJS --> Rendered
+	MainJS --> Rendered
+	Images --> Rendered
+	Remix --> Rendered
+	CDN --> Rendered
+	Rendered --> Visitor
+
+	classDef entry fill:#e8f3f1,stroke:#13795b,stroke-width:1px;
+	classDef layer fill:#fff3d6,stroke:#b7791f,stroke-width:1px;
+	classDef resource fill:#f5eafb,stroke:#7541a8,stroke-width:1px;
+	classDef output fill:#e9eefb,stroke:#3155a6,stroke-width:1px;
+	classDef animated stroke-dasharray:6 4,animation:dash 2s linear infinite;
+	class Home,Test,About entry;
+	class BootstrapCSS,SiteCSS,ResponsiveCSS,BootstrapJS,MainJS layer;
+	class Images,Remix,CDN resource;
+	class Browser,Rendered,Visitor output;
+	class About animated;
+```
+
+This architecture diagram describes responsibilities rather than request payloads. The presentation layer defines page markup, the styling and behavior layers enhance it, and the resource layer supplies local media, icons, and CDN assets. The dashed architecture link is animated in Mermaid hosts that permit custom SVG animation styles; hosts that sanitize animation still show the same architecture as a static flowchart.
 
 ## Project Structure
 
