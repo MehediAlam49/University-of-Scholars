@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title description">
+  <title id="title">University of Scholars front-end architecture</title>
+  <desc id="description">Animated architecture flow from visitors through the browser and presentation, styling, behavior, and resource layers to the rendered university interface.</desc>
+  <style>
+    .background { fill: #f8fafc; }
+    .title { fill: #172033; font: 700 28px Arial, sans-serif; }
+    .subtitle { fill: #64748b; font: 16px Arial, sans-serif; }
+    .group { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; }
+    .group-title { fill: #334155; font: 700 18px Arial, sans-serif; }
+    .node { stroke-width: 2; rx: 9; }
+    .entry { fill: #e8f3f1; stroke: #13795b; }
+    .layer { fill: #fff3d6; stroke: #b7791f; }
+    .resource { fill: #f5eafb; stroke: #7541a8; }
+    .output { fill: #e9eefb; stroke: #3155a6; }
+    .node-label { fill: #172033; font: 600 15px Arial, sans-serif; text-anchor: middle; }
+    .node-small { fill: #475569; font: 13px Arial, sans-serif; text-anchor: middle; }
+    .flow { fill: none; stroke: #3155a6; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 10 9; stroke-dashoffset: 0; animation: flow 2.4s linear infinite; marker-end: url(#arrow); }
+    .flow.secondary { stroke: #7541a8; stroke-width: 2; stroke-dasharray: 7 8; animation-duration: 3s; }
+    @keyframes flow { to { stroke-dashoffset: -38; } }
+    @media (prefers-reduced-motion: reduce) { .flow, .flow.secondary { animation: none; } }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3155a6" />
+    </marker>
+  </defs>
+
+  <rect class="background" width="1200" height="760" />
+  <text class="title" x="600" y="42" text-anchor="middle">University of Scholars Front-end Architecture</text>
+  <text class="subtitle" x="600" y="70" text-anchor="middle">Animated SVG flow using CSS stroke-dasharray and stroke-dashoffset</text>
+
+  <rect class="group" x="40" y="105" width="1120" height="120" />
+  <text class="group-title" x="65" y="136">Presentation layer</text>
+  <rect class="node entry" x="70" y="155" width="210" height="48" />
+  <text class="node-label" x="175" y="177">index.html</text><text class="node-small" x="175" y="194">Homepage</text>
+  <rect class="node entry" x="330" y="155" width="210" height="48" />
+  <text class="node-label" x="435" y="177">test.html</text><text class="node-small" x="435" y="194">Navbar experiment</text>
+  <rect class="node entry" x="590" y="155" width="250" height="48" />
+  <text class="node-label" x="715" y="177">pages/about_us/</text><text class="node-small" x="715" y="194">About Us pages</text>
+  <rect class="node output" x="890" y="155" width="230" height="48" />
+  <text class="node-label" x="1005" y="177">Web browser</text><text class="node-small" x="1005" y="194">Visitor entry point</text>
+
+  <rect class="group" x="40" y="270" width="350" height="210" />
+  <text class="group-title" x="65" y="301">Styling layer</text>
+  <rect class="node layer" x="70" y="322" width="290" height="42" /><text class="node-label" x="215" y="348">Bootstrap CSS</text>
+  <rect class="node layer" x="70" y="378" width="290" height="42" /><text class="node-label" x="215" y="404">assets/css/style.css</text>
+  <rect class="node layer" x="70" y="434" width="290" height="42" /><text class="node-label" x="215" y="460">assets/css/responsive.css</text>
+
+  <rect class="group" x="425" y="270" width="350" height="210" />
+  <text class="group-title" x="450" y="301">Behavior layer</text>
+  <rect class="node layer" x="455" y="350" width="290" height="42" /><text class="node-label" x="600" y="376">Bootstrap bundle JS</text>
+  <rect class="node layer" x="455" y="406" width="290" height="42" /><text class="node-label" x="600" y="432">assets/js/main.js</text>
+
+  <rect class="group" x="810" y="270" width="350" height="210" />
+  <text class="group-title" x="835" y="301">Resource layer</text>
+  <rect class="node resource" x="840" y="322" width="290" height="42" /><text class="node-label" x="985" y="348">assets/images/</text>
+  <rect class="node resource" x="840" y="378" width="290" height="42" /><text class="node-label" x="985" y="404">Remix Icon fonts</text>
+  <rect class="node resource" x="840" y="434" width="290" height="42" /><text class="node-label" x="985" y="460">Google Fonts / Font Awesome</text>
+
+  <rect class="node output" x="365" y="625" width="470" height="62" />
+  <text class="node-label" x="600" y="652">Rendered university interface</text>
+  <text class="node-small" x="600" y="672">Responsive pages, carousel, icons, and sticky header</text>
+
+  <path class="flow" d="M 890 203 C 760 245, 580 245, 215 322" />
+  <path class="flow" d="M 280 203 C 300 245, 335 270, 420 625" />
+  <path class="flow" d="M 540 203 C 550 245, 575 270, 600 350" />
+  <path class="flow secondary" d="M 715 203 C 760 245, 850 270, 985 322" />
+  <path class="flow" d="M 215 476 C 300 535, 390 585, 470 625" />
+  <path class="flow" d="M 600 448 C 600 510, 600 565, 600 625" />
+  <path class="flow secondary" d="M 985 476 C 900 535, 820 585, 730 625" />
+</svg>

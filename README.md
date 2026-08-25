@@ -433,78 +433,13 @@ The browser loads the homepage, local styles, vendor libraries, JavaScript, and 
 
 ## Animated Architecture Diagram
 
-```mermaid
----
-title: University of Scholars front-end architecture
-config:
-  flowchart:
-	curve: basis
----
-flowchart TD
-	Visitor([Visitor]) --> Browser[Web browser]
+<p align="center">
+  <img src="assets/architecture-flow.svg" alt="Animated architecture flowchart showing the University of Scholars front-end layers and dependencies" width="100%" />
+</p>
 
-	subgraph Presentation[Presentation layer]
-		Home[index.html<br/>Homepage]
-		Test[test.html<br/>Navbar experiment]
-		About[pages/about_us/<br/>About Us pages]
-	end
+[Open the animated SVG architecture diagram](assets/architecture-flow.svg)
 
-	subgraph Styling[Styling layer]
-		BootstrapCSS[Bootstrap CSS]
-		SiteCSS[assets/css/style.css]
-		ResponsiveCSS[assets/css/responsive.css]
-	end
-
-	subgraph Behavior[Behavior layer]
-		BootstrapJS[Bootstrap bundle JS]
-		MainJS[assets/js/main.js]
-	end
-
-	subgraph Resources[Resource layer]
-		Images[assets/images/<br/>Images and SVGs]
-		Remix[Remix Icon fonts]
-		CDN[Google Fonts and<br/>Font Awesome CDN]
-	end
-
-	Browser --> Home
-	Browser --> Test
-	Browser --> About
-	Home --> BootstrapCSS
-	Home --> SiteCSS
-	Home --> ResponsiveCSS
-	Home --> BootstrapJS
-	Home --> MainJS
-	Home --> Images
-	Home --> Remix
-	Home --> CDN
-	Test --> BootstrapCSS
-	Test --> BootstrapJS
-	About -. uses relative paths .-> SiteCSS
-	About -. uses relative paths .-> BootstrapCSS
-	About -. uses relative paths .-> Images
-	BootstrapCSS --> Rendered[Rendered university interface]
-	SiteCSS --> Rendered
-	ResponsiveCSS --> Rendered
-	BootstrapJS --> Rendered
-	MainJS --> Rendered
-	Images --> Rendered
-	Remix --> Rendered
-	CDN --> Rendered
-	Rendered --> Visitor
-
-	classDef entry fill:#e8f3f1,stroke:#13795b,stroke-width:1px;
-	classDef layer fill:#fff3d6,stroke:#b7791f,stroke-width:1px;
-	classDef resource fill:#f5eafb,stroke:#7541a8,stroke-width:1px;
-	classDef output fill:#e9eefb,stroke:#3155a6,stroke-width:1px;
-	classDef animated stroke-dasharray:6 4,animation:dash 2s linear infinite;
-	class Home,Test,About entry;
-	class BootstrapCSS,SiteCSS,ResponsiveCSS,BootstrapJS,MainJS layer;
-	class Images,Remix,CDN resource;
-	class Browser,Rendered,Visitor output;
-	class About animated;
-```
-
-This architecture diagram describes responsibilities rather than request payloads. The presentation layer defines page markup, the styling and behavior layers enhance it, and the resource layer supplies local media, icons, and CDN assets. The dashed architecture link is animated in Mermaid hosts that permit custom SVG animation styles; hosts that sanitize animation still show the same architecture as a static flowchart.
+This architecture diagram describes responsibilities rather than request payloads. The presentation layer contains the HTML pages, the styling and behavior layers enhance them, and the resource layer supplies local media, icons, and CDN assets. The arrows are SVG vector paths styled with CSS `stroke-dasharray` and animated `stroke-dashoffset`, creating moving line effects without losing image quality at different sizes. The SVG also respects `prefers-reduced-motion` by disabling animation when the visitor requests less motion. Markdown hosts that block animated SVG images can still open the source file directly or display its static vector frame.
 
 ## Project Structure
 
@@ -515,6 +450,7 @@ This architecture diagram describes responsibilities rather than request payload
 ├── assets/
 │   ├── css/style.css             # Main site styles
 │   ├── css/responsive.css        # Responsive-style entry point
+│   ├── architecture-flow.svg     # Animated architecture flowchart
 │   ├── images/                   # Logos, banners, profiles, and content images
 │   └── js/main.js                # Sticky header behavior
 ├── pages/about_us/               # About Us page placeholders
